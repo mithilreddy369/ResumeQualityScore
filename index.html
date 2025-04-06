@@ -15,43 +15,43 @@
         </div>
     </header>
     
-    <!-- Main Content -->
     <main class="container mx-auto my-16 grid grid-cols-1 md:grid-cols-2 gap-12 px-8 items-start">
-        <!-- Left Section -->
-        <section class="bg-white p-8 rounded-2xl shadow-lg flex flex-col justify-between">
-            <div>
-                <h2 class="text-4xl font-bold text-indigo-700 leading-tight">Free Resume Score Checker</h2>
-                <p class="mt-4 text-gray-600 text-lg">Instantly analyze your resume and get expert feedback to boost your job chances.</p>
-                
-                <!-- Tips -->
-                <ul class="mt-6 space-y-3 text-gray-700">
-                    <li class="flex items-start"><span class="text-indigo-600 font-bold mr-2">✔</span> Use strong action verbs for impact.</li>
-                    <li class="flex items-start"><span class="text-indigo-600 font-bold mr-2">✔</span> Optimize for industry-specific keywords.</li>
-                    <li class="flex items-start"><span class="text-indigo-600 font-bold mr-2">✔</span> Keep it structured and concise.</li>
-                    <li class="flex items-start"><span class="text-indigo-600 font-bold mr-2">✔</span> Proofread to avoid mistakes.</li>
-                    <li class="flex items-start"><span class="text-indigo-600 font-bold mr-2">✔</span> Tailor your resume for each job.</li>
-                    <li class="flex items-start"><span class="text-indigo-600 font-bold mr-2">✔</span> Highlight measurable achievements.</li>
-                    <li class="flex items-start"><span class="text-indigo-600 font-bold mr-2">✔</span> Use a professional, readable font.</li>
-                </ul>
-            </div>
-        </section>
+    <!-- Right Section (Now moved to the left) -->
+    <section class="bg-white p-8 rounded-2xl shadow-lg text-center flex flex-col justify-between order-2 md:order-1">
+        <h2 class="text-3xl font-bold text-indigo-700">Upload Your Resume</h2>
+        <label class="block border-4 border-dashed border-gray-400 p-10 rounded-xl cursor-pointer hover:bg-gray-100 transition duration-300 mt-6">
+            <input type="file" id="resumeInput" accept=".pdf" class="hidden">
+            <span class="text-gray-500 text-xl font-semibold">Click to Upload (PDF Only)</span>
+        </label>
+        <div id="fileName" class="mt-4 text-gray-600 text-lg font-medium"></div>
 
-        <!-- Right Section -->
-        <section class="bg-white p-8 rounded-2xl shadow-lg text-center flex flex-col justify-between">
-            <h2 class="text-3xl font-bold text-indigo-700">Upload Your Resume</h2>
-            <label class="block border-4 border-dashed border-gray-400 p-10 rounded-xl cursor-pointer hover:bg-gray-100 transition duration-300 mt-6">
-                <input type="file" id="resumeInput" accept=".pdf" class="hidden">
-                <span class="text-gray-500 text-xl font-semibold">Click to Upload (PDF Only)</span>
-            </label>
-            <div id="fileName" class="mt-4 text-gray-600 text-lg font-medium"></div>
-            
-            <!-- Score Section -->
-            <div id="scoreContainer" class="hidden mt-6 text-center">
-                <h3 class="text-3xl font-semibold text-indigo-700">Your Resume Score</h3>
-                <p id="scoreNumber" class="text-7xl font-bold drop-shadow-lg" style="color: #4f46e5;">0/100</p>
-            </div>
-        </section>
-    </main>
+        <!-- Score Section -->
+        <div id="scoreContainer" class="hidden mt-6 text-center">
+            <h3 class="text-3xl font-semibold text-indigo-700">Your Resume Score</h3>
+            <p id="scoreNumber" class="text-7xl font-bold drop-shadow-lg" style="color: #4f46e5;">0/100</p>
+        </div>
+    </section>
+
+    <!-- Left Section (Now moved to the right) -->
+    <section class="bg-white p-8 rounded-2xl shadow-lg flex flex-col justify-between order-1 md:order-2">
+        <div>
+            <h2 class="text-4xl font-bold text-indigo-700 leading-tight">Free Resume Score Checker</h2>
+            <p class="mt-4 text-gray-600 text-lg">Instantly analyze your resume and get expert feedback to boost your job chances.</p>
+
+            <!-- Tips -->
+            <ul class="mt-6 space-y-3 text-gray-700">
+                <li class="flex items-start"><span class="text-indigo-600 font-bold mr-2">✔</span> Use strong action verbs for impact.</li>
+                <li class="flex items-start"><span class="text-indigo-600 font-bold mr-2">✔</span> Optimize for industry-specific keywords.</li>
+                <li class="flex items-start"><span class="text-indigo-600 font-bold mr-2">✔</span> Keep it structured and concise.</li>
+                <li class="flex items-start"><span class="text-indigo-600 font-bold mr-2">✔</span> Proofread to avoid mistakes.</li>
+                <li class="flex items-start"><span class="text-indigo-600 font-bold mr-2">✔</span> Tailor your resume for each job.</li>
+                <li class="flex items-start"><span class="text-indigo-600 font-bold mr-2">✔</span> Highlight measurable achievements.</li>
+                <li class="flex items-start"><span class="text-indigo-600 font-bold mr-2">✔</span> Use a professional, readable font.</li>
+            </ul>
+        </div>
+    </section>
+</main>
+
     <div class="mt-8 p-4 bg-yellow-100 border-l-4 border-yellow-500 rounded">
     <h3 class="font-bold text-yellow-700 text-lg">Important Disclaimer</h3>
     <p class="text-sm text-gray-700 mt-2">
